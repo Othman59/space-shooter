@@ -8,6 +8,7 @@ Le joueur contrôle un vaisseau spatial et doit survivre face à des vagues de m
 
 Le gameplay s’inspire des classiques du genre : déplacements rapides, et difficulté progressive.
 
+#
 🛠️ Technologies utilisées
 
 Moteur de jeu : Godot Engine
@@ -19,7 +20,7 @@ Graphismes : 2D
 Plateforme cible : PC (Windows / Linux / macOS)
 
 ##
-
+#
 🎯 Fonctionnalités
 
 Déplacement du vaisseau du joueur
@@ -36,11 +37,13 @@ Système de vies
 
 Écran de Game Over
 
+#
 🎮 Contrôles
 Action	Touche
 Déplacement	Flèches directionnelles / AZOP
 Quitter	Échap
 
+#
 📁 Structure du projet
 /scenes
   Player.tscn
@@ -61,6 +64,7 @@ Quitter	Échap
   sounds/
 ▶️ Lancer le jeu
 
+#
 Installer Godot Engine (version recommandée : 4.x ou 3.x selon le projet)
 
 Ouvrir Godot
@@ -69,6 +73,7 @@ Importer le dossier du projet
 
 Lancer la scène principale (Main.tscn)
 
+#
 🧠 Améliorations possibles
 
 Tire en continue 
@@ -85,6 +90,7 @@ Menu principal et options
 
 Sauvegarde du meilleur score
 
+#
 👤 Auteur
 
 Nom : Othman
