@@ -19,7 +19,6 @@ Graphismes : 2D
 
 Plateforme cible : PC (Windows / Linux / macOS)
 
-##
 #
 🎯 Fonctionnalités
 
