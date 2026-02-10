@@ -1,4 +1,5 @@
-🚀 Space Shooter – Godot
+🚀 Space Shooter – Godo
+/**
 🎮 Description
 
 Space Shooter est un jeu d’arcade en 2D développé avec le moteur Godot.
