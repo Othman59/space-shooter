@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cq3tkt3sdf83p"]
+[gd_scene load_steps=10 format=3 uid="uid://cq3tkt3sdf83p"]
 
 [ext_resource type="Script" uid="uid://b5syff1ia71yo" path="res://level.gd" id="1_f2txt"]
 [ext_resource type="Texture2D" uid="uid://hvpjdvwkyius" path="res://black.png" id="1_u52ul"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c4en7senca0ap" path="res://player.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://dtbaacm7n5ek1" path="res://spawner.tscn" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://bsvrv5f7cjbfw" path="res://game_over.tscn" id="4_1ainy"]
+[ext_resource type="AudioStream" uid="uid://byo27f7kfw7mn" path="res://music_space_shooter.wav" id="7_n6hdu"]
+[ext_resource type="AudioStream" uid="uid://caxw80bu62mfl" path="res://game_over.wav" id="8_km5ld"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f2txt"]
 font = ExtResource("2_0b4ue")
@@ -46,6 +48,14 @@ position = Vector2(167, 186)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_n6hdu")
+volume_db = -10.0
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_km5ld")
+volume_db = -5.0
 
 [connection signal="dead" from="Player" to="." method="_on_player_dead"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

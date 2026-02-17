@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvbvw6dynnv6w"
+path="res://.godot/imported/Space _shooter.wav-5cc9d77449c52ab89ca82628728e9cf7.sample"
+
+[deps]
+
+source_file="res://Space _shooter.wav"
+dest_files=["res://.godot/imported/Space _shooter.wav-5cc9d77449c52ab89ca82628728e9cf7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

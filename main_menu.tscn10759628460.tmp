@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://dff0fjkfjte8o"]
+
+[ext_resource type="FontFile" uid="uid://bxrhgr53dn1fj" path="res://Kenney Future.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://wj6vgxnw7sdo" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="AudioStream" uid="uid://dvbvw6dynnv6w" path="res://Space _shooter.wav" id="3_fu7sn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_06t4h"]
+font_size = 60
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0196078, 0.0196078, 0.72549)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -14.0
+offset_right = 83.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+text = "Space Shooter"
+label_settings = SubResource("LabelSettings_06t4h")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 25
+text = "Play"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fu7sn")
+volume_db = -10.0
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1e1rytraycwb"]
+
+[ext_resource type="Texture2D" uid="uid://b1hjrgp1lfwvp" path="res://laserBlue01.png" id="1_a85iw"]
+[ext_resource type="Script" uid="uid://b4iyf3rokc1vm" path="res://projectile.gd" id="1_qxf0c"]
+[ext_resource type="AudioStream" uid="uid://okaqvibu2mcw" path="res://Paintball_shoot.wav" id="3_dgwo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxf0c"]
+size = Vector2(12, 54)
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_qxf0c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a85iw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qxf0c")
+
+[node name="CollisionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dgwo2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

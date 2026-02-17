@@ -2,6 +2,9 @@ extends Area2D
 
 var speed = 250
 
+func dead():
+	queue_free()
+
 func _physics_process(delta):
 	global_position.x -= speed * delta
 
